@@ -1,4 +1,4 @@
-# BiKi Open API
+# bitdata Open API
 
 简体中文 | [English](./open-us.md)
 
