@@ -6,7 +6,6 @@
 
   - [**create api key**](#创建api-key)
   - [**Interface call description**](#接口调用方式说明)
-  - [**server**](#服务器)
 
 - [**REST API**](#rest-api)
 
@@ -18,21 +17,20 @@
   - [**Get All Tickers**](#获取所有交易对行情)
   - [**Get Recent Fills**](#获取各个币对最新成交价)
   - [**获取指定币对当前行情**](#获取指定币对当前行情)
-  - [**Kline Data**](#获取k线数据)
+  - [**Kline Data**](#获取K线数据)
   - [**获取买卖盘深度**](#获取买卖盘深度)
   - [**User Balances**](#获取资产余额)
-  - [**Order List**](#获取全部委托)
+  - [**Order List**](#获取委托)
   - [**Order Details**](#获取订单详情)
   - [**Creating Order**](#创建订单)
   - [**Cancel an Order**](#取消委托单)
 
 - [**Websocket API**](#websocket-api)
 
-  - [**URL**](#host-url)
-  - [**request**](#请求交互)
-  - [**订阅实时成交信息**](#订阅实时成交信息)
-  - [**订阅深度盘口**](#订阅深度盘口)
-  - [**订阅K线数据**](#订阅k线数据)
+  - [**URL**](#接入URL(socket))
+  - [**request**](#请求交互(socket))
+  - [**买卖5档**](#买卖5档:)
+  - [**买卖20档:**](#买卖20档:)
 
 ## 入门指引
 
@@ -110,12 +108,12 @@ API                                              |  说明
 ------------------------------------------------ |  ---------------
 [GET /market/symbols](#查询系统支持的所有交易对及精度) |  查询系统支持的所有交易对及精度
 [GET /market/list](#获取所有交易对行情)       | 获取所有交易对行情
-[GET /market/price-all](#获取各个币对的最新成交价)           | 获取各个币对的最新成交价
+[GET /market/price-all](#获取各个币对最新成交价)           | 获取各个币对的最新成交价
 [GET /market/info](#获取指定币对当前行情)            | 获取指定币对当前行情
 [GET /market/line](#获取K线数据)              | 获取K线数据
 [GET /market/dept](#获取买卖盘深度)       | 获取买卖盘深度
 [GET /user/balance](#获取资产余额)           | 获取资产余额
-[GET /order/list](#获取当前委托或全部委托)              | 获取当前委托或全部委托
+[GET /order/list](#获取委托)              | 获取当前委托或全部委托
 [GET /order/detail](#获取订单详情)                | 获取订单详情
 [POST /order/create](#创建订单)           |  创建订单
 [POST /order/cancel](#取消委托单)           | 取消委托单
@@ -565,11 +563,11 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 
 ## Websocket API
 
-### 接入 URL
+### 接入URL(socket)
 
 #### [ws://ws.bitdata.com.cn/v1]
 
-### 请求交互
+### 请求交互(socket)
 
 - 客户端在连接时需添加header头。X-Uuid：为用户自定义唯一id。X-Unit：计价币种，默认USD。可选["USD","CNY"]
 
