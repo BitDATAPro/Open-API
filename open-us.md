@@ -312,7 +312,7 @@ period | true | number | K-line cycle, minute as unit, 1 is 1 minute, 1 day is 1
 Parameter name   | Is it neccessry | Data type   | Description                      | Value range
 ------ | ---- | ------ | ----------------------- | -----------------------------
 symbol | true | string | symbol                     | 	btc-usdt
-type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfilled
+type   | true | string | depth | 5 and 10 are supported, 5 by default when unfilled
 
 
 #### Return the sample:
