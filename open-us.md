@@ -16,9 +16,9 @@
   - [**Get Symbols List**](#Get-Symbols-List)
   - [**Get All Tickers**](#Get-All-Tickers)
   - [**Get Recent Fills**](#Get-latest-price-of-the-specified-symbol)
-  - [**获取指定币对当前行情**](#获取指定币对当前行情)
+  - [**Obtain the current market of the designated symbol**](#Get-Ticker)
   - [**Kline Data**](#Kline-Data)
-  - [**获取买卖盘深度**](#获取买卖盘深度)
+  - [**Obtain the depth of order book**](#Get-depth-of-the-specified-symbol)
   - [**User Balances**](#User-Balances)
   - [**Order List**](#Order-List)
   - [**Order Details**](#Order-Details)
@@ -513,9 +513,9 @@ order_id | true | string | order_id        |
 
 Parameter name    | Is it neccessry   | Data type   | Description            | Value range
 ------- | ----- | ------ | -------------- | ------------------------------------
-side    | true  | string | 买卖方向           | BUY/SELL
+side    | true  | string | Side            | BUY/SELL
 type    | true  | string | Order type           | trade type（limit,market,stop-limit）
-amount  | true  | string | 购买数量(多义, 复用字段) | 订单交易量（市价买单此字段为订单交易额）
+amount  | true  | string | Purchase quantity ( value range: when type=market is order value )  | Trading volume (value range: when type=market is order value)
 price   | false | string | Order price           | 
 symbol  | true  | string | symbol             |
 time    | true  | string | timestamp            |
@@ -545,7 +545,7 @@ sign    | true  | string | signature             |
 Parameter name     | Is it neccessry  | Data type   | Description        | Value range
 -------- | ---- | ------ | ---------- | ----
 contents | true | string |  orders list |  42040201,421421,421421|BTC-USDT |  1 就是订单号逗号隔开，2是交易对
-type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行取消 
+type     | true | int    |  | 1. cancel according to the order; 2. cancel according to the symbol
 
 #### return the sample:
 
@@ -599,7 +599,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
                 "amount":"8374",
                 "ts":1608717969,//timestamp
                 "price":"0.056061",//price
-                "side":"buy"//交易方向
+                "side":"buy"//Side 
             }
         ]
     }
@@ -646,8 +646,8 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
                 "1222.3"
             ]
         ],
-        "asks":[//卖盘
-            [//买1
+        "asks":[//Buy
+            [//buy 1
                 "0.05617",
                 "2593"
             ],
@@ -675,7 +675,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 
 ### Top 20:
 
-#### 连接成功后发送请求:
+#### Request sent after successful connection:
 ```json
 {
     "op":"sub",//sub，unsub
@@ -691,7 +691,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
     "ch":"market.depth.step20",//Subscribe the channel
     "scope":"3400:2392:6666",//Subscribe the symbol
     "data":{
-        "bids":[//卖盘
+        "bids":[//sell
             [
                 "0.05597",//price
                 "2591"//amount
@@ -708,13 +708,13 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
                 "0.055804",
                 "147.8"
             ],
-            [//卖1
+            [//sell 1
                 "0.055759",
                 "1222.3"
             ]
         ],
-        "asks":[//卖盘
-            [//买1
+        "asks":[//buy
+            [//buy 1
                 "0.05617",
                 "2593"
             ],
