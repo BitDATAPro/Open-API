@@ -1,4 +1,4 @@
-# bitdata Open API
+# BitDATA Open API
 
 [Chinese](./open-en.md) | [English]
 
@@ -11,7 +11,7 @@
 
   - [**Interface URL**](#URL)
   - [**Request**](#Request)
-  - [**signature**](#signature)
+  - [**Signature**](#Signature)
   - [**REST API**](#REST-API-LIST)
   - [**Get Symbols List**](#Get-Symbols-List)
   - [**Get All Tickers**](#Get-All-Tickers)
@@ -28,7 +28,7 @@
 - [**Websocket API**](#websocket-api)
 
   - [**URL**](#URL(socket))
-  - [**request**](#request(socket))
+  - [**Request**](#request(socket))
   - [**Top 5**](#Top-5:)
   - [**Top 20**](#Top-20:)
 
@@ -73,7 +73,7 @@ All requests are based on Https protocol, and the content-type in the request he
 
 code 200 succeed  The rest is failure
 
-### signature
+### Signature
 
 #### Signature instructions
 

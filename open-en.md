@@ -1,4 +1,4 @@
-# bitdata Open API
+# BitDATA Open API
 
 简体中文 | [English](./open-us.md)
 
