@@ -65,8 +65,6 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 #### Introduce
 
-REST API 提供行情查询、余额查询、币币交易、订单管理功能
-
 All requests are based on Https protocol, and the content-type in the request header information needs to be uniformly formatted as the form:
 
 - **content-type:application/x-www-form-urlencoded**
