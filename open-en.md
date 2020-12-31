@@ -7,12 +7,12 @@
   - [**Create API key**](#Create-API-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
-- [**Rest API**](#Rest-API)
+- [**REST API**](#Rest-API)
 
   - [**Interface URL**](#Url)
   - [**Request**](#Request)
   - [**Signature**](#Signature)
-  - [**Rest API**](#Rest-API-list)
+  - [**REST API**](#REST-API)
   - [**Get symbols list**](#Get-symbols-list)
   - [**Get all tickers**](#Get-all-tickers)
   - [**Get recent fills**](#Get-latest-price-of-the-specified-symbol)
@@ -45,7 +45,7 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 **BitDATA provides two kinds of calling access, which can be called by users according to their usage scenarios and preferences.**
 
-- Rest API
+- REST API
 
   Provide functions of market inquiry, balance inquiry, crypto exchange and order management. Users are advised to use REST API to query account balance, crypto exchange and order management.
 
@@ -55,7 +55,7 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 <br>
 
-## Rest API
+## REST API
 
 ###  URL
 
@@ -99,7 +99,7 @@ php example：
 
 
 
-### Rest API list
+### REST API
 
 API                                              |  explain
 ------------------------------------------------ |  ---------------
