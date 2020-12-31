@@ -624,7 +624,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
     "ch":"market.depth.step5",//Subscribe the channel
     "scope":"3400:2392:6666",//Subscribe the symbol
     "data":{
-        "bids":[//卖盘
+        "bids":[//sell
             [
                 "0.05597",//price
                 "2591"//amount
