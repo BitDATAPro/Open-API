@@ -566,7 +566,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 
 ### request(socket)
 
-- The client needs to add a header when connecting. X-Uuid: the unique id customized for the user. X-Unit: denominated coin, default on USD. Optional ["USD", "CNY"]
+- The client needs to add a header when connecting. X-Uuid: the unique id customized for the user. X-Unit: denominated coin, USD by default. Optional ["USD", "CNY"]
 
 #### Heartbeat message
 
