@@ -103,17 +103,17 @@ php example：
 
 API                                              |  explain
 ------------------------------------------------ |  ---------------
-[GET /market/symbols](#Get Symbols List) |  Get Symbols List
-[GET /market/list](#Get All Tickers)       | Get All Tickers
-[GET /market/price-all](#Get latest price of the specified symbol)           | Get latest price of the specified symbol
-[GET /market/info](#Get Ticker)            | Get Ticker
-[GET /market/line](#Kline Data)              | Kline Data
-[GET /market/dept](#Get depth of the specified symbol)       | Get depth of the specified symbol
-[GET /user/balance](#User Balances)           | User Balances
-[GET /order/list](#Order List)              | Order List
-[GET /order/detail](#Order Details)                | Order Details
-[POST /order/create](#Creating Order)           |  Creating Order
-[POST /order/cancel](#Cancel an Order)           | Cancel an Order
+[GET /market/symbols](#Get-Symbols-List) |  Get Symbols List
+[GET /market/list](#Get-All-Tickers)       | Get All Tickers
+[GET /market/price-all](#Get-latest-price-of-the-specified-symbol)           | Get latest price of the specified symbol
+[GET /market/info](#Get-Ticker)            | Get Ticker
+[GET /market/line](#Kline-Data)              | Kline Data
+[GET /market/dept](#Get-depth-of-the-specified-symbol)       | Get depth of the specified symbol
+[GET /user/balance](#User-Balances)           | User Balances
+[GET /order/list](#Order-List)              | Order List
+[GET /order/detail](#Order-Details)                | Order Details
+[POST /order/create](#Creating-Order)           |  Creating Order
+[POST /order/cancel](#Cancel-an-Order)           | Cancel an Order
 
 ### Get Symbols List
 
