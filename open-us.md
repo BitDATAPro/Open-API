@@ -28,9 +28,9 @@
 - [**Websocket API**](#websocket-API)
 
   - [**Url**](#URL(socket))
-  - [**Request**](#request(socket))
-  - [**Top 5**](#Top-5:)
-  - [**Top 20**](#Top-20:)
+  - [**Request**](#Request(socket))
+  - [**Top 5**](#Top-5)
+  - [**Top 20**](#Top-20)
 
 ## Getting started
 
@@ -606,7 +606,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 }
 ```
 
-### Top 5:
+### Top 5
 
 #### Return the sample:
 ```json
@@ -673,7 +673,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 }
 ```
 
-### Top 20:
+### Top 20
 
 #### Request sent after successful connection:
 ```json
