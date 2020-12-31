@@ -2,7 +2,7 @@
 
 [Chinese](./open-en.md) | [English]
 
-- [**Getting started**](#Starer guide)
+   - [**Getting started**](#Starer guide)
 
   - [**create api key**](#创建api-key)
   - [**Interface call description**](#接口调用方式说明)
