@@ -514,7 +514,7 @@ order_id | true | string | 订单号        |
 Parameter name    | Is it neccessry   | Data type   | Description            | Value range
 ------- | ----- | ------ | -------------- | ------------------------------------
 side    | true  | string | 买卖方向           | BUY/SELL
-type    | true  | string | 挂单类型           | 交易类型（limit 限价 market 市价 stop-limit 止盈止损）
+type    | true  | string | 挂单类型           | trade type（limit,market,stop-limit）
 amount  | true  | string | 购买数量(多义, 复用字段) | 订单交易量（市价买单此字段为订单交易额）
 price   | false | string | 委托单价           | 
 symbol  | true  | string | symbol             |
@@ -611,7 +611,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 #### return the sample:
 ```json
 {
-    "op":"sub",//sub为订阅，unsub为取消订阅
+    "op":"sub",//sub，unsub
     "ch":"market.depth.step5",//Subscribe the channel
     "scope":"3400:2392:6666",//Subscribe the symbol, format: "base currency id: quote currency id: 6666 (fixed parameter)"
     "data":""
