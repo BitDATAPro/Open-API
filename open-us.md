@@ -4,7 +4,7 @@
 
 - [**Getting started**](#Getting-started)
 
-  - [**Create API Key**](#Create-api-key)
+  - [**Create api key**](#Create-api-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
 - [**REST API**](#rest-api)
