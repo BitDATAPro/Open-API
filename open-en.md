@@ -80,7 +80,7 @@ It succeeds if returned code is 200, or fails.
 API requests are likely to be tampered  during network transmission. To ensure that the request has not been changed, all interfaces must use your secret_key for signature authentication so as to verify whether the parameter or parameter value has changed during the transmission.
 #### Steps for signature
 
-get parameter participates in signature. post parameter does not participate in signature authentication than enter parameter.
+get parameter participates in signature. post parameter does not participate in signature authentication.
 - (1) Field needed to be filled: timestamp: current timestamp APIkey: user key.
 - (2) sort the ASCII codes according to the key of the parameters.
 - (3) stitching parameters such as a=1&b=2&c=3.
