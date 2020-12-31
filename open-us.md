@@ -7,7 +7,7 @@
   - [**Create api key**](#Create-api-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
-- [**REST API**](#rest-api)
+- [**Rest api**](#rest-api)
 
   - [**Interface URL**](#Url)
   - [**Request**](#Request)
