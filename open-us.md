@@ -568,7 +568,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 
 - The client needs to add a header when connecting. X-Uuid: the unique id customized for the user. X-Unit: denominated coin, default on USD. Optional ["USD", "CNY"]
 
-#### 心跳消息
+#### Heartbeat message
 
 - When the user's Websocket client connects to the Websocket server, the server sends ping messages to the user periodically. When the client receives the heartbeat message, it should return the pong message.
 
