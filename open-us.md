@@ -2,41 +2,41 @@
 
 [Chinese](./open-en.md) | [English]
 
-- [**Getting started**](#Starer-guide)
+- [**Getting started**](#Getting-started)
 
-  - [**Create API Key**](#Create-API-Key)
+  - [**Create API Key**](#Create-api-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
 - [**REST API**](#rest-api)
 
-  - [**Interface URL**](#URL)
+  - [**Interface URL**](#Url)
   - [**Request**](#Request)
   - [**Signature**](#Signature)
-  - [**REST API**](#REST-API-LIST)
-  - [**Get Symbols List**](#Get-Symbols-List)
-  - [**Get All Tickers**](#Get-All-Tickers)
-  - [**Get Recent Fills**](#Get-latest-price-of-the-specified-symbol)
-  - [**Obtain the current market of the designated symbol**](#Get-Ticker)
-  - [**Kline Data**](#Kline-Data)
+  - [**Rest api**](#Rest-api-list)
+  - [**Get symbols list**](#Get-symbols-list)
+  - [**Get all tickers**](#Get-all-tickers)
+  - [**Get recent fills**](#Get-latest-price-of-the-specified-symbol)
+  - [**Obtain the current market of the designated symbol**](#Get-ticker)
+  - [**Kline data**](#Kline-data)
   - [**Obtain the depth of order book**](#Get-depth-of-the-specified-symbol)
-  - [**User Balances**](#User-Balances)
-  - [**Order List**](#Order-List)
-  - [**Order Details**](#Order-Details)
-  - [**Creating Order**](#Creating-Order)
-  - [**Cancel an Order**](#Cancel-an-Order)
+  - [**User balances**](#User-balances)
+  - [**Order list**](#Order-list)
+  - [**Order details**](#Order-details)
+  - [**Creating order**](#Creating-order)
+  - [**Cancel an order**](#Cancel-an-order)
 
-- [**Websocket API**](#websocket-api)
+- [**Websocket api**](#websocket-api)
 
-  - [**URL**](#URL(socket))
+  - [**Url**](#URL(socket))
   - [**Request**](#request(socket))
   - [**Top 5**](#Top-5:)
   - [**Top 20**](#Top-20:)
 
-## Starer guide
+## Getting started
 
 **Welcome to use the developer documentation. BitDATA provides an easy-to-use API interface through which you can obtain market data, conduct transactions and manage orders through API.**
 
-### Create API Key
+### Create api Key
 
 Email to bd@bitdata.pro to explain the purpose for key application 
 > **Please do not leak Secret Key information to avoid asset losses. It is recommended that users bind IP addresses for API.**
@@ -55,11 +55,11 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 <br>
 
-## REST API
+## Rest api
 
 ###  URL
 
-- **[https://open.bitdata.com](https://open.bitdata.com) **
+- **[https://openapi.bitdata.com.cn](https://openapi.bitdata.com.cn) **
 
 ### Request
 
@@ -99,23 +99,23 @@ php example：
 
 
 
-### REST API LIST
+### Rest api list
 
 API                                              |  explain
 ------------------------------------------------ |  ---------------
-[GET /market/symbols](#Get-Symbols-List) |  Get Symbols List
-[GET /market/list](#Get-All-Tickers)       | Get All Tickers
+[GET /market/symbols](#Get-symbols-list) |  Get symbols list
+[GET /market/list](#Get-all-tickers)       | Get all tickers
 [GET /market/price-all](#Get-latest-price-of-the-specified-symbol)           | Get latest price of the specified symbol
-[GET /market/info](#Get-Ticker)            | Get Ticker
-[GET /market/line](#Kline-Data)              | Kline Data
+[GET /market/info](#Get-ticker)            | Get ticker
+[GET /market/line](#Kline-data)              | Kline data
 [GET /market/dept](#Get-depth-of-the-specified-symbol)       | Get depth of the specified symbol
-[GET /user/balance](#User-Balances)           | User Balances
-[GET /order/list](#Order-List)              | Order List
-[GET /order/detail](#Order-Details)                | Order Details
-[POST /order/create](#Creating-Order)           |  Creating Order
-[POST /order/cancel](#Cancel-an-Order)           | Cancel an Order
+[GET /user/balance](#User-balances)           | User balances
+[GET /order/list](#Order-List)              | Order list
+[GET /order/detail](#Order-details)                | Order details
+[POST /order/create](#Creating-order)           |  Creating order
+[POST /order/cancel](#Cancel-an-order)           | Cancel an order
 
-### Get Symbols List
+### Get symbols list
 
 #### GET [/market/symbols]
 
@@ -157,7 +157,7 @@ API                                              |  explain
 }
 ```
 
-### Get All Tickers
+### Get all tickers
 
 #### GET [/market/list]
 
@@ -220,7 +220,7 @@ API                                              |  explain
 }
 ```
 
-### Get Ticker
+### Get ticker
 
 #### GET [/market/info]
 
@@ -245,7 +245,7 @@ symbol | true | string | Symbol | ddam-usdt
 ```
 
 
-### Kline Data
+### Kline data
 
 #### GET [/market/line]
 
@@ -371,7 +371,7 @@ type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfi
 }
 ```
 
-### User Balances
+### User balances
 
 #### GET [/user/balance]
 
@@ -398,7 +398,7 @@ type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfi
 }
 ```
 
-### Order List
+### Order list
 
 #### GET [/order/list]
 
@@ -466,7 +466,7 @@ action   | true  |  int   |  type   | 1 is open order, 2 is all orders
 }
 ```
 
-### Order Details
+### Order details
 
 #### GET [/order/detail]
 
@@ -504,7 +504,7 @@ order_id | true | string | order_id        |
 }
 ```
 
-### Creating Order
+### Creating order
 
 #### POST [/order/create]
 
@@ -536,7 +536,7 @@ sign    | true  | string | signature             |
 }
 ```
 
-### Cancel an Order
+### Cancel an order
 
 #### POST [/order/cancel]
 
@@ -558,7 +558,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 }
 ```
 
-## Websocket API
+## Websocket api
 
 ### URL(socket)
 
@@ -617,7 +617,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
     "data":""
 }
 ```
-#### 数据变化后返回：
+#### Return after data changed：
 
 ```json
 {
