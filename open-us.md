@@ -4,15 +4,15 @@
 
 - [**Getting started**](#Getting-started)
 
-  - [**Create api key**](#Create-api-key)
+  - [**Create API key**](#Create-API-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
-- [**Rest api**](#rest-api)
+- [**Rest API**](#rest-API)
 
   - [**Interface URL**](#Url)
   - [**Request**](#Request)
   - [**Signature**](#Signature)
-  - [**Rest api**](#Rest-api-list)
+  - [**Rest API**](#Rest-API-list)
   - [**Get symbols list**](#Get-symbols-list)
   - [**Get all tickers**](#Get-all-tickers)
   - [**Get recent fills**](#Get-latest-price-of-the-specified-symbol)
@@ -25,7 +25,7 @@
   - [**Creating order**](#Creating-order)
   - [**Cancel an order**](#Cancel-an-order)
 
-- [**Websocket api**](#websocket-api)
+- [**Websocket API**](#websocket-API)
 
   - [**Url**](#URL(socket))
   - [**Request**](#request(socket))
@@ -36,7 +36,7 @@
 
 **Welcome to use the developer documentation. BitDATA provides an easy-to-use API interface through which you can obtain market data, conduct transactions and manage orders through API.**
 
-### Create api Key
+### Create API Key
 
 Email to bd@bitdata.pro to explain the purpose for key application 
 > **Please do not leak Secret Key information to avoid asset losses. It is recommended that users bind IP addresses for API.**
@@ -55,11 +55,11 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 <br>
 
-## Rest api
+## Rest API
 
 ###  URL
 
-- [**https://openapi.bitdata.com.cn**](https://openapi.bitdata.com.cn) 
+- [**https://openAPI.bitdata.com.cn**](https://openAPI.bitdata.com.cn) 
 
 ### Request
 
@@ -81,7 +81,7 @@ API requests are likely to be tampered  during network transmission. To ensure t
 #### Steps for signature
 
 get parameter participates in signature. post parameter does not participate in signature authentication than enter parameter.
-- (1) Field needed to be filled: timestamp: current timestamp apikey: user key.
+- (1) Field needed to be filled: timestamp: current timestamp APIkey: user key.
 - (2) sort the ASCII codes according to the key of the parameters.
 - (3) stitching parameters such as a=1&b=2&c=3.
 - (4) Call the HmacSHA256 hash function with the generated string and API private key as parameters to obtain the hash value.
@@ -90,7 +90,7 @@ get parameter participates in signature. post parameter does not participate in 
 php example：
 ```php
 <?php
- $data = ["apikey" => "apikey", "timestamp"  =>  now()];
+ $data = ["APIkey" => "APIkey", "timestamp"  =>  now()];
  ksort($data);
  $query = http_build_query($params);
  $signature = hash_hmac('sha256', $query, $this->userInfo['secret_key']); 
@@ -99,7 +99,7 @@ php example：
 
 
 
-### Rest api list
+### Rest API list
 
 API                                              |  explain
 ------------------------------------------------ |  ---------------
@@ -121,7 +121,7 @@ API                                              |  explain
 
 #### Parameter name: empty
 
-#### return the sample:
+#### Return the sample:
 
 ```
 {
@@ -164,7 +164,7 @@ API                                              |  explain
 #### Parameter name: empty
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -192,7 +192,7 @@ API                                              |  explain
 #### Parameter name: empty
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -230,7 +230,7 @@ Parameter name   | Is it neccessry | Data type   | Description   | Value range
 ------ | ---- | ------ | --- | -----------------------------
 symbol | true | string | Symbol | ddam-usdt
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -257,7 +257,7 @@ symbol | true | string | Symbol                       | ddam-usdt
 period | true | number | K-line cycle, minute as unit, 1 is 1 minute, 1 day is 1,440 |  1m 15m  1h  1d   market span 
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -315,7 +315,7 @@ symbol | true | string | symbol                     | 	btc-usdt
 type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfilled
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -376,7 +376,7 @@ type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfi
 #### GET [/user/balance]
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -412,7 +412,7 @@ page     | false | string | page         |
 symbol   | true  | string | symbol         |
 action   | true  |  int   |  type   | 1 is open order, 2 is all orders
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -477,7 +477,7 @@ Parameter name     | Is it neccessry  | Data type   | Description        | Value
 order_id | true | string | order_id        |
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -523,7 +523,7 @@ sign    | true  | string | signature             |
 
 
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -547,7 +547,7 @@ Parameter name     | Is it neccessry  | Data type   | Description        | Value
 contents | true | string |  orders list |  42040201,421421,421421|BTC-USDT |  1 就是订单号逗号隔开，2是交易对
 type     | true | int    |  | 1. cancel according to the order; 2. cancel according to the symbol
 
-#### return the sample:
+#### Return the sample:
 
 ```python
 {
@@ -558,13 +558,13 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 }
 ```
 
-## Websocket api
+## Websocket API
 
 ### URL(socket)
 
 #### [ws://ws.bitdata.com.cn/v1]
 
-### request(socket)
+### Request(socket)
 
 - The client needs to add a header when connecting. X-Uuid: the unique id customized for the user. X-Unit: denominated coin, USD by default. Optional ["USD", "CNY"]
 
@@ -576,7 +576,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 
 ### Subscribe to market trade data
 
-#### return the sample:
+#### Return the sample:
 
 ```json
 {
@@ -587,7 +587,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 }
 ```
 
-#### return the sample:
+#### Return the sample:
 
 ```json
 {
@@ -608,7 +608,7 @@ type     | true | int    |  | 1. cancel according to the order; 2. cancel accord
 
 ### Top 5:
 
-#### return the sample:
+#### Return the sample:
 ```json
 {
     "op":"sub",//sub，unsub
