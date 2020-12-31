@@ -134,11 +134,11 @@ API                                              |  explain
                 'base_currency':"BTC",//base currency
                 'quote_currency':"USDT",//quote currency
                 'symbol': "BTC-USDT",//symbol
-                'is_support_stop_limit': true,//是否支持止盈止损
+                'is_support_stop_limit': true,//support stop-limit or not?
                 'price_precision': 1,//Price accuracy
                 'amount_precision': 6,//The number of precision
-                'min_order_amt': "0.001",//最小挂单量
-                'min_order_value': "10.00",//最小挂单额
+                'min_order_amt': "0.001",//Min order amount 
+                'min_order_value': "10.00",//Min order value
                 'status': "online"//status
             },
             {
@@ -176,11 +176,11 @@ API                                              |  explain
     "sell": 22, //sell
     "symbol": "DDAM-USDT",
     "high": 0.01, // top price 
-    "vol": 1468201, //成交量
+    "vol": 1468201, //Trading volume
     "last": 0.0087, // latest price
     "low": 0.0082, //floor price
-    "change": -11.22,//涨跌幅
-    "rose": 0.0087 //涨跌比
+    "change": -11.22,//Change
+    "rose": 0.0087 //Change rate
   }]
 }
 ```
@@ -254,7 +254,7 @@ symbol | true | string | Symbol | ddam-usdt
 Parameter name   | Is it neccessry | Data type    | Description                        | Value range
 ------ | ---- | ------ | ------------------------- | -----------------------------
 symbol | true | string | Symbol                       | ddam-usdt
-period | true | number | K线周期 单位为分钟,1代表1分钟 1天为1440 | 1m 15m  1h  1d   获取多久得行情
+period | true | number | K-line cycle, minute as unit, 1 is 1 minute, 1 day is 1,440 |  1m 15m  1h  1d   market span 
 
 
 #### return the sample:
@@ -312,7 +312,7 @@ period | true | number | K线周期 单位为分钟,1代表1分钟 1天为1440 |
 Parameter name   | Is it neccessry | Data type   | Description                      | Value range
 ------ | ---- | ------ | ----------------------- | -----------------------------
 symbol | true | string | symbol                     | 	btc-usdt
-type   | true | string | depth | 支持5和10   不填默认为5
+type   | true | string | depth | 5 and 10 are supported,  default is 5 when unfilled
 
 
 #### return the sample:
@@ -410,7 +410,7 @@ Parameter name     | Is it neccessry   | Data type   | Description         | Val
 pageSize | false | string | Page Size      |
 page     | false | string | page         |
 symbol   | true  | string | symbol         |
-action   | true  |  int   |  type   | 1当前委托  2所有委托
+action   | true  |  int   |  type   | 1 is open order, 2 is all orders
 
 #### return the sample:
 
@@ -514,9 +514,9 @@ order_id | true | string | 订单号        |
 Parameter name    | Is it neccessry   | Data type   | Description            | Value range
 ------- | ----- | ------ | -------------- | ------------------------------------
 side    | true  | string | 买卖方向           | BUY/SELL
-type    | true  | string | 挂单类型           | trade type（limit,market,stop-limit）
+type    | true  | string | Order type           | trade type（limit,market,stop-limit）
 amount  | true  | string | 购买数量(多义, 复用字段) | 订单交易量（市价买单此字段为订单交易额）
-price   | false | string | 委托单价           | 
+price   | false | string | Order price           | 
 symbol  | true  | string | symbol             |
 time    | true  | string | timestamp            |
 sign    | true  | string | signature             |
@@ -574,13 +574,13 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 
 > When the Websocket server sends the `ping` message several times in a row but does not receive any `pong` message return, the server will actively disconnect from the client
 
-### 订阅实时成交信息
+### Subscribe to market trade data
 
 #### return the sample:
 
 ```json
 {
-    "op":"sub",//sub为订阅，unsub为取消订阅
+    "op":"sub",//sub，unsub
     "ch":"market.trade.detail",//Subscribe the channel 
     "scope":"3400:2392:6666",//Subscribe the symbol, format: "base currency id: quote currency id: 6666 (fixed parameter)"
     "data":""
@@ -606,7 +606,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 }
 ```
 
-### 买卖5档:
+### Top 5:
 
 #### return the sample:
 ```json
@@ -673,7 +673,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 }
 ```
 
-### 买卖20档:
+### Top 20:
 
 #### 连接成功后发送请求:
 ```json
@@ -684,7 +684,7 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
     "data":""
 }
 ```
-#### 数据变化后返回：
+#### Return after data changed ：
 
 ```json
 {
