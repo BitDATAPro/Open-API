@@ -474,7 +474,7 @@ action   | true  |  int   |  type   | 1 is open order, 2 is all orders
 
 Parameter name     | Is it neccessry  | Data type   | Description        | Value range
 -------- | ---- | ------ | ---------- | ----
-order_id | true | string | 订单号        |
+order_id | true | string | order_id        |
 
 
 #### return the sample:
@@ -678,9 +678,9 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 #### 连接成功后发送请求:
 ```json
 {
-    "op":"sub",//sub为订阅，unsub为取消订阅
-    "ch":"market.depth.step20",//订阅频道
-    "scope":"3400:2392:6666",//订阅交易对,格式："基础币id:计价币id:6666（固定参数）"
+    "op":"sub",//sub，unsub
+    "ch":"market.depth.step20",//Subscribe the channel
+    "scope":"3400:2392:6666",//Subscribe the symbol, format: "base currency id: quote currency id: 6666 (fixed parameter)"
     "data":""
 }
 ```
@@ -688,13 +688,13 @@ type     | true | int    |  | 1为根据订单 取消 2为根据交易对进行�
 
 ```json
 {
-    "ch":"market.depth.step20",//订阅频道
-    "scope":"3400:2392:6666",//订阅交易对
+    "ch":"market.depth.step20",//Subscribe the channel
+    "scope":"3400:2392:6666",//Subscribe the symbol
     "data":{
         "bids":[//卖盘
             [
-                "0.05597",//价格
-                "2591"//数量
+                "0.05597",//price
+                "2591"//amount
             ],
             [
                 "0.05592",
