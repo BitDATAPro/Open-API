@@ -2,28 +2,28 @@
 
 [Chinese](./open-en.md) | [English]
 
-- [**Getting started**](#Starer guide)
+- [**Getting started**](#Starer-guide)
 
-  - [**create api key**](#CREATE API Key)
-  - [**Interface call description**](#Description on the way of calling access)
+  - [**create api key**](#CREATE-API-Key)
+  - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
 - [**REST API**](#rest-api)
 
   - [**Interface URL**](#URL)
   - [**Request**](#Request)
   - [**signature**](#signature)
-  - [**REST API**](#REST API LIST)
-  - [**Get Symbols List**](#Get Symbols List)
-  - [**Get All Tickers**](#Get All Tickers)
-  - [**Get Recent Fills**](#Get latest price of the specified symbol)
+  - [**REST API**](#REST-API-LIST)
+  - [**Get Symbols List**](#Get-Symbols-List)
+  - [**Get All Tickers**](#Get-All-Tickers)
+  - [**Get Recent Fills**](#Get-latest-price-of-the-specified-symbol)
   - [**获取指定币对当前行情**](#获取指定币对当前行情)
-  - [**Kline Data**](#Kline Data)
+  - [**Kline Data**](#Kline-Data)
   - [**获取买卖盘深度**](#获取买卖盘深度)
-  - [**User Balances**](#User Balances)
-  - [**Order List**](#Order List)
-  - [**Order Details**](#Order Details)
-  - [**Creating Order**](#Creating Order)
-  - [**Cancel an Order**](#Cancel an Order)
+  - [**User Balances**](#User-Balances)
+  - [**Order List**](#Order-List)
+  - [**Order Details**](#Order-Details)
+  - [**Creating Order**](#Creating-Order)
+  - [**Cancel an Order**](#Cancel-an-Order)
 
 - [**Websocket API**](#websocket-api)
 
