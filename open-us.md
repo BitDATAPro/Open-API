@@ -7,7 +7,7 @@
   - [**Create API key**](#Create-API-key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
-- [**Rest API**](#rest-API)
+- [**Rest API**](#Rest-API)
 
   - [**Interface URL**](#Url)
   - [**Request**](#Request)
@@ -45,7 +45,7 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 **BitDATA provides two kinds of calling access, which can be called by users according to their usage scenarios and preferences.**
 
-- REST API
+- Rest API
 
   Provide functions of market inquiry, balance inquiry, crypto exchange and order management. Users are advised to use REST API to query account balance, crypto exchange and order management.
 
