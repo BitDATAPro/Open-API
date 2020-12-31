@@ -59,7 +59,7 @@ Email to bd@bitdata.pro to explain the purpose for key application
 
 ###  URL
 
-- **[https://open.bitdata.com](https://open.bitdata.com) [推荐]**
+- **[https://open.bitdata.com](https://open.bitdata.com) **
 
 ### Request
 
