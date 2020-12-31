@@ -1,6 +1,6 @@
 # BitDATA Open API
 
-[Chinese](./open-en.md) | [English]
+[Chinese](./open-en.md) | English
 
 - [**Getting started**](#Getting-started)
 
