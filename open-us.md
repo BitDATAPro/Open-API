@@ -4,7 +4,7 @@
 
 - [**Getting started**](#Starer-guide)
 
-  - [**create api key**](#CREATE-API-Key)
+  - [**Create API Key**](#Create-API-Key)
   - [**Interface call description**](#Description-on-the-way-of-calling-access)
 
 - [**REST API**](#rest-api)
@@ -36,7 +36,7 @@
 
 **Welcome to use the developer documentation. BitDATA provides an easy-to-use API interface through which you can obtain market data, conduct transactions and manage orders through API.**
 
-### CREATE API Key
+### Create API Key
 
 Email to bd@bitdata.pro to explain the purpose for key application 
 > **Please do not leak Secret Key information to avoid asset losses. It is recommended that users bind IP addresses for API.**
