@@ -71,7 +71,7 @@ All requests are based on Https protocol, and the content-type in the request he
 
 #### Code
 
-code 200 succeed  The rest is failure
+It succeeds if returned code is 200, or fails.
 
 ### Signature
 
