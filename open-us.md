@@ -29,8 +29,8 @@
 
   - [**URL**](#URL(socket))
   - [**request**](#request(socket))
-  - [**买卖5档**](#买卖5档:)
-  - [**买卖20档**](#买卖20档:)
+  - [**Top 5**](#Top-5:)
+  - [**Top 20**](#Top 20:)
 
 ## Starer guide
 
